@@ -1,0 +1,38 @@
+<div class="calcContainer">
+  <div class="right" id="calculation">{{infix}}</div>
+  <div class="right" id="result">{{resultFromCalculationResult}}</div>
+  <div class="right" id="error">{{errorMessage}}</div>
+  <div class="calcButtons">
+    <div>
+      <input type="button" class="halfButton" value="C" (click)="clearClickEvent()" />
+      <input type="button" class="halfButton" value="<-" (click)="backClickEvent()" />
+      <input type="button" value="(" (click)="operatorClickEvent('(')"/>
+      <input type="button" value=")" (click)="operatorClickEvent(')')" />    
+      <input type="button" value="&divide;" (click)="operatorClickEvent('/')" />
+    </div>
+    <div>
+      <input type="button" value="7" (click)="operandClickEvent('7')" />
+      <input type="button" value="8" (click)="operandClickEvent('8')" />
+      <input type="button" value="9" (click)="operandClickEvent('9')" />
+      <input type="button" value="*" (click)="operatorClickEvent('*')" />
+    </div>
+    <div>
+      <input type="button" value="4" (click)="operandClickEvent('4')" />
+      <input type="button" value="5" (click)="operandClickEvent('5')" />
+      <input type="button" value="6" (click)="operandClickEvent('6')" />
+      <input type="button" value="-" (click)="operatorClickEvent('-')"/>
+    </div>
+    <div>
+      <input type="button" value="1" (click)="operandClickEvent('1')" />
+      <input type="button" value="2" (click)="operandClickEvent('2')" />
+      <input type="button" value="3" (click)="operandClickEvent('3')" />
+      <input type="button" value="+" (click)="operatorClickEvent('+')"/>
+    </div>
+    <div>
+      <input type="button" value="&#8723;" (click)="toggleSignClickEvent('#')" />
+      <input type="button" value="0" (click)="operandClickEvent('0')" />
+      <input type="button" value="." (click)="operandClickEvent('.')" />
+      <input type="button" value="=" (click)="calculateClickEvent()"/>
+    </div>
+  </div>
+</div>
